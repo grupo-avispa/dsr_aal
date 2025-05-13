@@ -1,0 +1,6 @@
+agent_id = 2 # Change id
+agent_name = speechAgent
+robot_name = robot
+log_path = /home/robocomp/robocomp/components/cajasvacias-campero/logs/
+sounds_filepath = /home/robocomp/robocomp/components/cajasvacias-campero/resources/
+volume_factor = 1

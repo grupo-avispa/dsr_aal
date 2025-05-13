@@ -1,0 +1,5 @@
+agent_id = 20 # Change id
+agent_name = adaptationAgent
+robot_name = robot
+log_path = /home/robocomp/robocomp/components/cajasvacias-campero/logs/
+models = /home/robocomp/robocomp/components/cajasvacias-campero/etc/models/

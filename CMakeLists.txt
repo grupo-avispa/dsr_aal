@@ -1,0 +1,6 @@
+
+SUBDIRS(
+  adaptationAgent
+  speechAgent
+  webServerAgent
+)

@@ -1,0 +1,30 @@
+# Ignore WebServerItera data
+WebServerItera/data/fotos
+WebServerItera/data/database
+WebServerItera/logs
+
+# Ignore build and bin folders
+build/
+bin/
+lib/
+
+# Ignore cmake files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Ignore temp files
+*.*~
+
+# Ignore external code
+mercuryapi/
+
+# Ignore Visual Studio Code
+.vscode/*
+!.vscode/terminals.json
+
+# Ignore trace and logs
+*.fbl
+*.csv
+*.log
