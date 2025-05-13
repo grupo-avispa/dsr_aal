@@ -4,7 +4,7 @@
 
 ## Overview
 
-scitos2 is a ROS 2 stack designed for Metralabs robots that utilize the MIRA framework, including models such as SCITOS, TORY, MORPHIA, etc. This stack comprises several packages, each serving a unique purpose:
+``dsr_aal`` is a package that provides a set of DSR agents for different use cases and environments. These agents are designed to enhance the robot's capabilities and enable it to perform various tasks in different environments. The package includes the following agents:
 
 * [adaptationAgent]: DSR agent that changes the behavior of the robot depending on the context.
 * [mqtt_agent]: DSR agent that connects the robot to an MQTT broker, allowing it to publish and subscribe to topics.
