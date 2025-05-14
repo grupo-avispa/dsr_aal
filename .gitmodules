@@ -1,0 +1,6 @@
+[submodule "mqtt_dsr_agent"]
+	path = mqtt_dsr_agent
+	url = https://github.com/grupo-avispa/mqtt_dsr_agent
+[submodule "wasp_dsr_planner"]
+	path = wasp_dsr_planner
+	url = https://github.com/grupo-avispa/wasp_dsr_planner
