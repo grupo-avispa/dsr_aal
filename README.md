@@ -1,7 +1,7 @@
 # dsr_aal
 
 ![License](https://img.shields.io/github/license/grupo-avispa/dsr_aal)
-[![Build](https://github.com/grupo-avispa/dsr_aal/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/grupo-avispa/dsr_aal/actions/workflows/build.yml)
+<!-- [![Build](https://github.com/grupo-avispa/dsr_aal/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/grupo-avispa/dsr_aal/actions/workflows/build.yml) -->
 
 
 ## Overview
