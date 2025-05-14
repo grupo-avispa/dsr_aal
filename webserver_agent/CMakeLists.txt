@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(webServerAgent)
+project(webserver_agent)
 
 # Default to C++20
 if(NOT CMAKE_CXX_STANDARD)
@@ -21,7 +21,7 @@ find_package(fastrtps REQUIRED)
 
 # Set include directories
 include_directories(
-  ${CMAKE_SOURCE_DIR}/components/webServerAgent/include
+  ${CMAKE_SOURCE_DIR}/components/webserver_agent/include
 )
 
 # Set QT libraries DSR libraries and OATPP libraries
@@ -31,7 +31,7 @@ set(OATPP_LIBRARIES oatpp::oatpp oatpp::oatpp-websocket)
 
 # Set the headers
 set(headers
-  ${CMAKE_SOURCE_DIR}/components/webServerAgent/include/DSR_interface.hpp
+  ${CMAKE_SOURCE_DIR}/components/webserver_agent/include/DSR_interface.hpp
 )
 
 # Qt Moc
@@ -58,8 +58,8 @@ target_link_libraries(websocket
 # ########################
 # # Main Program        ##
 # ########################
-add_executable(webServerAgent src/webServerAgent.cpp)
-target_link_libraries(webServerAgent
+add_executable(webserver_agent src/webserver_agent.cpp)
+target_link_libraries(webserver_agent
   PUBLIC ${OATPP_LIBRARIES} ${DSR_LIBRARIES}
   PRIVATE web_dsr websocket Eigen3::Eigen ${QT_LIBRARIES}
 )
@@ -73,7 +73,7 @@ target_link_libraries(webServerAgent
 # DESTINATION ${COMPONENT_DEVEL_PATH}/lib
 # )
 
-# INSTALL(TARGETS webServerAgent
+# INSTALL(TARGETS webserver_agent
 # DESTINATION ${COMPONENT_DEVEL_PATH}/bin
 # )
 
@@ -82,7 +82,7 @@ INSTALL(TARGETS web_dsr websocket
   DESTINATION ${COMPONENT_INSTALL_PATH}/lib
 )
 
-install(TARGETS webServerAgent
+install(TARGETS webserver_agent
   DESTINATION ${COMPONENT_INSTALL_PATH}/bin
 )
 

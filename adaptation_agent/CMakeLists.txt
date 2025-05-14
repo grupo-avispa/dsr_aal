@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(adaptationAgent)
+project(adaptation_agent)
 
 # Default to C++20
 if(NOT CMAKE_CXX_STANDARD)
