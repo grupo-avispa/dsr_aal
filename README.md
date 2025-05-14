@@ -44,7 +44,7 @@ cmake .. && make -j4 && sudo make install
 ```
 
 [adaptation_agent]: /adaptation_agent
-[mqtt_dsr_agent]: /mqtt_dsr_agent
+[mqtt_dsr_agent]: https://github.com/grupo-avispa/mqtt_dsr_agent
 [speech_agent]: /speech_agent
-[wasp_dsr_planner]: /wasp_dsr_planner
+[wasp_dsr_planner]: https://github.com/grupo-avispa/wasp_dsr_planner
 [webserver_agent]: /webserver_agent
