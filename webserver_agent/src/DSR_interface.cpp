@@ -43,17 +43,17 @@ DSR_interface::DSR_interface() : QObject() {
 DSR_interface::~DSR_interface() = default;
 
 void DSR_interface::initializeDSR(){
-        // create graph
-		G = std::make_shared<DSR::DSRGraph>(0, agent_name, agent_id, ""); // Init nodes
-		std::cout<< __FUNCTION__ << "Graph loaded" << std::endl;  
+    // create graph
+    G = std::make_shared<DSR::DSRGraph>(agent_name, agent_id, ""); // Init nodes
+    std::cout<< __FUNCTION__ << "Graph loaded" << std::endl;  
 
-		//dsr update signals
-		QObject::connect(G.get(), &DSR::DSRGraph::update_node_signal, this, &DSR_interface::modify_node_slot);
-		QObject::connect(G.get(), &DSR::DSRGraph::update_edge_signal, this, &DSR_interface::modify_edge_slot);
-		QObject::connect(G.get(), &DSR::DSRGraph::update_node_attr_signal, this, &DSR_interface::modify_node_attrs_slot);
-		QObject::connect(G.get(), &DSR::DSRGraph::update_edge_attr_signal, this, &DSR_interface::modify_edge_attrs_slot);
-		QObject::connect(G.get(), &DSR::DSRGraph::del_edge_signal, this, &DSR_interface::del_edge_slot);
-		QObject::connect(G.get(), &DSR::DSRGraph::del_node_signal, this, &DSR_interface::del_node_slot);
+    //dsr update signals
+    QObject::connect(G.get(), &DSR::DSRGraph::update_node_signal, this, &DSR_interface::modify_node_slot);
+    QObject::connect(G.get(), &DSR::DSRGraph::update_edge_signal, this, &DSR_interface::modify_edge_slot);
+    QObject::connect(G.get(), &DSR::DSRGraph::update_node_attr_signal, this, &DSR_interface::modify_node_attrs_slot);
+    QObject::connect(G.get(), &DSR::DSRGraph::update_edge_attr_signal, this, &DSR_interface::modify_edge_attrs_slot);
+    QObject::connect(G.get(), &DSR::DSRGraph::del_edge_signal, this, &DSR_interface::del_edge_slot);
+    QObject::connect(G.get(), &DSR::DSRGraph::del_node_signal, this, &DSR_interface::del_node_slot);
 }
 
 bool DSR_interface::configParamsParser(std::string file_path){
