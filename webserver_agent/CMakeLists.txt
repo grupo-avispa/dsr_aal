@@ -58,7 +58,7 @@ target_link_libraries(websocket
 # ########################
 # # Main Program        ##
 # ########################
-add_executable(webserver_agent src/webserver_agent.cpp)
+add_executable(webserver_agent src/webServerAgent.cpp)
 target_link_libraries(webserver_agent
   PUBLIC ${OATPP_LIBRARIES} ${DSR_LIBRARIES}
   PRIVATE web_dsr websocket Eigen3::Eigen ${QT_LIBRARIES}
