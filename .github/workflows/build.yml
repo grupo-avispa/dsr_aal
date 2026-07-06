@@ -46,7 +46,7 @@ jobs:
     runs-on: ubuntu-latest
     container: grupoavispa/cortex:development-latest
     steps:
-      - name: Install git
+      - name: Install dependencies
         run: |
           DEBIAN_FRONTEND=noninteractive apt-get update
           DEBIAN_FRONTEND=noninteractive apt-get install -y git curl \

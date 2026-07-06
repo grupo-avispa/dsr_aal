@@ -21,7 +21,7 @@ find_package(fastrtps REQUIRED)
 
 # Set include directories
 include_directories(
-  ${CMAKE_SOURCE_DIR}/components/webserver_agent/include
+  include
 )
 
 # Set QT libraries DSR libraries and OATPP libraries
@@ -31,7 +31,7 @@ set(OATPP_LIBRARIES oatpp::oatpp oatpp::oatpp-websocket)
 
 # Set the headers
 set(headers
-  ${CMAKE_SOURCE_DIR}/components/webserver_agent/include/DSR_interface.hpp
+  include/DSR_interface.hpp
 )
 
 # Qt Moc
