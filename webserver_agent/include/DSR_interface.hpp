@@ -26,13 +26,13 @@
 // DSR
 #include "dsr/api/dsr_api.h"
 #include "dsr/gui/dsr_gui.h"
-#include "../../../include/dsr_api_ext.hpp"
+#include "../../include/dsr_api_ext.hpp"
 
 // OATPP
 #include "oatpp-websocket/WebSocket.hpp"
 
 // UTILS
-#include "../../../include/json_messages.hpp"
+#include "../../include/json_messages.hpp"
 
 extern std::shared_ptr<oatpp::websocket::WebSocket> my_socket;
 extern std::shared_ptr<oatpp::websocket::WebSocket> button_socket;

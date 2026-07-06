@@ -16,7 +16,7 @@
 
 
 #include "speechAgent/speech_agent.hpp"
-#include "../../../include/dsr_api_ext.hpp"
+#include "../../include/dsr_api_ext.hpp"
 
 SpeechAgent::SpeechAgent(std::string agent_name, int agent_id, std::string robot_name)
 : agent_name_(agent_name), robot_name_(robot_name)

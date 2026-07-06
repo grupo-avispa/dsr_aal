@@ -21,8 +21,8 @@
 #include "nlohmann/json.hpp"
 
 #include "adaptationAgent/adaptation_agent.hpp"
-#include "../../../include/dsr_api_ext.hpp"
-#include "../../../include/json_messages.hpp"
+#include "../../include/dsr_api_ext.hpp"
+#include "../../include/json_messages.hpp"
 
 using json = nlohmann::json;
 

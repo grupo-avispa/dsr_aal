@@ -18,12 +18,12 @@
 
 #include "oatpp-websocket/ConnectionHandler.hpp"
 #include "oatpp-websocket/WebSocket.hpp"
-#include "../../../include/json_messages.hpp"
+#include "../../include/json_messages.hpp"
 
 // DSR
 #include "dsr/api/dsr_api.h"
 #include "dsr/gui/dsr_gui.h"
-#include "../../../include/dsr_api_ext.hpp"
+#include "../../include/dsr_api_ext.hpp"
 #include "./DSR_init.hpp"
 
 extern int conect;

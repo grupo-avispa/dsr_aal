@@ -46,7 +46,7 @@ set(dependencies
 
 # Set the headers
 set(headers
-  include/${PROJECT_NAME}/speech_agent.hpp
+  include/speechAgent/speech_agent.hpp
 )
 
 set(sources

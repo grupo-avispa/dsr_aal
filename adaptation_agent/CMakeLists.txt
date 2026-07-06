@@ -46,7 +46,7 @@ set(dependencies
 
 # Set the headers
 set(headers
-  include/${PROJECT_NAME}/adaptation_agent.hpp
+  include/adaptationAgent/adaptation_agent.hpp
 )
 
 set(sources
