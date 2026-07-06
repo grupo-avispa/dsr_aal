@@ -18,7 +18,7 @@ jobs:
           cp -r /usr/local/include/ artifacts
           cp -r /usr/local/lib/ artifacts
       - name: Upload artifacts
-        uses: actions/upload-artifact@v8
+        uses: actions/upload-artifact@v7
         with:
           name: behaviortree_cpp
           path: artifacts/
@@ -35,7 +35,7 @@ jobs:
           cp -r /usr/local/include/ artifacts
           cp -r /usr/local/lib/ artifacts
       - name: Upload artifacts
-        uses: actions/upload-artifact@v8
+        uses: actions/upload-artifact@v7
         with:
           name: oatpp
           path: artifacts/
