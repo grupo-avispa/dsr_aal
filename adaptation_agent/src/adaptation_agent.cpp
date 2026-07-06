@@ -57,7 +57,7 @@ AdaptationAgent::AdaptationAgent(std::string agent_name, int agent_id, std::stri
   QObject::connect(
     G_.get(), &DSR::DSRGraph::del_edge_signal, this, &AdaptationAgent::edge_deleted);
   QObject::connect(
-    G_.get(), &DSR::DSRGraph::del_node_signal_by_node, this, &AdaptationAgent::node_deleted);
+    G_.get(), &DSR::DSRGraph::deleted_node_signal, this, &AdaptationAgent::node_deleted);
   QObject::connect(
     G_.get(), &DSR::DSRGraph::create_edge_signal, this, &AdaptationAgent::edge_created);
 
