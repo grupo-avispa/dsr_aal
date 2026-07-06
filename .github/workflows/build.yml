@@ -2,9 +2,9 @@ name: Build
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   behaviortree_cpp:
@@ -18,7 +18,7 @@ jobs:
           cp -r /usr/local/include/ artifacts
           cp -r /usr/local/lib/ artifacts
       - name: Upload artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v8
         with:
           name: behaviortree_cpp
           path: artifacts/
@@ -35,7 +35,7 @@ jobs:
           cp -r /usr/local/include/ artifacts
           cp -r /usr/local/lib/ artifacts
       - name: Upload artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v8
         with:
           name: oatpp
           path: artifacts/
@@ -46,25 +46,30 @@ jobs:
     runs-on: ubuntu-latest
     container: grupoavispa/cortex:development-latest
     steps:
+      - name: Install git
+        run: |
+          DEBIAN_FRONTEND=noninteractive apt-get update
+          DEBIAN_FRONTEND=noninteractive apt-get install -y git
+
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           submodules: recursive
 
       - name: Download BehaviorTree.CPP artifacts
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: behaviortree_cpp
           path: artifacts
 
       - name: Download Oatpp artifacts
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: oatpp
           path: artifacts
 
       - name: Cache build directory
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: build/
           key: cache-${{ github.ref_name }}
