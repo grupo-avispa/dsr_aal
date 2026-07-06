@@ -49,7 +49,11 @@ jobs:
       - name: Install git
         run: |
           DEBIAN_FRONTEND=noninteractive apt-get update
-          DEBIAN_FRONTEND=noninteractive apt-get install -y git curl
+          DEBIAN_FRONTEND=noninteractive apt-get install -y git curl \
+          cmake make build-essential libboost-all-dev \
+          nlohmann-json3-dev libeigen3-dev libttspico-utils speech-dispatcher \
+          sox libwebsockets-dev libzmq3-dev libncurses-dev libspdlog-dev moreutils \
+          libopenscenegraph-dev libtinyxml2-dev qtbase5-dev
 
       - name: Checkout
         uses: actions/checkout@v7
