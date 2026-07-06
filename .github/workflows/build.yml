@@ -76,10 +76,14 @@ jobs:
           restore-keys: |
             cache-${{ github.event.repository.default_branch }}
 
-      - name: Install dependencies
+      - name: Install ONNX Runtime
         run: |
-          DEBIAN_FRONTEND=noninteractive apt-get update
-          ./install_dependencies.sh
+          cd /tmp
+          curl -sSL https://github.com/microsoft/onnxruntime/releases/download/v1.17.0/onnxruntime-linux-x64-1.17.0.tgz -o onnxruntime-linux-x64-1.17.0.tgz
+          tar -xzf onnxruntime-linux-x64-1.17.0.tgz
+          cp -R onnxruntime-linux-x64-1.17.0/include /usr/local/include/onnxruntime
+          cp -R onnxruntime-linux-x64-1.17.0/lib /usr/local
+          rm -rf onnxruntime-linux-x64-1.17.0 onnxruntime-linux-x64-1.17.0.tgz
           ln -sf /usr/include/eigen3/Eigen /usr/include/Eigen
 
       - name: Copy dependencies
